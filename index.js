@@ -8,6 +8,7 @@ function showMessage() {
 
     if (messageIn.value == '') {
         messageOut.innerHTML = 'Please enter a valid value';
+        messageOut.animate([{ opacity: '0.2' }, { opacity: '1' }], { duration: 800, fill: 'forwards' });
         messageOut.style.color = `#FF0000`;
         setTimeout(()=>{
             messageOut.textContent = '';
@@ -15,7 +16,7 @@ function showMessage() {
     }
     else {
         messageOut.innerHTML = messageIn.value;
-        messageOut.style.transition = `all 0.3s ease`;
+        messageOut.animate([{ opacity: '0.2' }, { opacity: '1' }], { duration: 800, fill: 'forwards' });
         messageOut.style.color = `#D13AD6`;
         setBackToDefault();
     }
