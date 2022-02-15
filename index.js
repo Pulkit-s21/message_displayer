@@ -17,5 +17,10 @@ function showMessage() {
         messageOut.innerHTML = messageIn.value;
         messageOut.style.transition = `all 0.3s ease`;
         messageOut.style.color = `#D13AD6`;
+        setBackToDefault();
     }
+}
+
+function setBackToDefault() {
+    messageIn.value = '';
 }
